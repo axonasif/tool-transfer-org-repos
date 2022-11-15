@@ -1,3 +1,9 @@
+
+function command::exists() {
+	declare cmd="$1";
+	cmd="$(command -v "$cmd")" && test -x "$cmd";
+}
+
 function dw() {
 	declare -a dw_cmd;
 	if command::exists curl; then {
@@ -17,7 +23,7 @@ EOF
 		)"
 		sudo sh -c "$cmd";
 	} else {
-		log::warn "curl or wget wasn't found, some things will go wrong";
+		log::error "curl or wget wasn't found, some things will go wrong" 1 || exit;
 	} fi
 }
 
