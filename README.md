@@ -25,7 +25,7 @@ An interactive tool that you can use directly from your browser to transfer or m
 
 # How does it work
 
-It uses GitHub API to transfer the repositories. Different API calls are made in 6 places [[1](./src/main#L36), [2](./src/main#L36), [3](./src/main.sh#L48), [4](./src/main.sh#L63), [5](./src/main.sh#L78), [6](./src/main.sh#L131)] for things like:
+It uses GitHub API to transfer the repositories. Different API calls are made in 6 places [[1](./src/main.sh#L36), [2](./src/main#L36), [3](./src/main.sh#L48), [4](./src/main.sh#L63), [5](./src/main.sh#L78), [6](./src/main.sh#L131)] for things like:
 
 - Logging into GitHub if needed.
 
